@@ -1,0 +1,8 @@
+**VEKTOR TOPLAMA**
+
+result.x = a.x + b.x;
+result.y = a.y + b.y;
+result.z = a.z + b.z;
+
+**VEKTOR ÇIKARMA**
+TOPLAMA NIN AYNISI
