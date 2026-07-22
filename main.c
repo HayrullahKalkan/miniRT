@@ -95,7 +95,14 @@ int main(int ac, char **av)
 	t_mlx a;
 	(void)ac;
 	(void)av;
-	
+	int fd;
+	fd = open(av[1],O_RDONLY);
+	if(fd < 0)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	parser(fd);
 	//init(&a);
 	a.mlx_ptr = mlx_init();
 	a.win_ptr= mlx_new_window(a.mlx_ptr, 800 ,800, "MİNİ_RT");

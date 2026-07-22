@@ -1,5 +1,5 @@
 NAME = miniRT
-SRCS = main.c
+SRCS = main.c ./parser/parser.c ./getnextline/get_next_line.c ./getnextline/get_next_line_utils.c
 OBJS = $(SRCS:.c=.o)
 
 MLX_PATH = ./minilibx-linux

@@ -17,3 +17,5 @@ O ve D sırasıyla orijin ve yönü temsil eder, t ise ışın boyunca hareket e
 denklemi ` x ² + y ² + z ² = 1 ` (matematiği basitleştirmek için, dönüşümler daha sonra uygulanabilir). 
 Bazı açılımlar ve basitleştirmelerden sonra, ışın kesişim denklemi şu biçimde elde edilir: (O + t⋅D)⋅(O + t⋅D) = 1 . 
 Daha sonra, herhangi bir ışın için denklemi çözerek bir kesişim olup olmadığını anlarız.
+
+
