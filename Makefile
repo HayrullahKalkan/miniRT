@@ -1,7 +1,7 @@
 NAME = miniRT
 SRCS = \
 	main.c \
-	./parser/parser.c \
+	./parser/parser.c ./parser/parser_utils.c \
 	./parser/atod.c \
 	./getnextline/get_next_line.c \
 	./getnextline/get_next_line_utils.c \

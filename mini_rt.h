@@ -6,7 +6,7 @@
 /*   By: hakalkan <hakalkan@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/16 14:44:21 by hakalkan          #+#    #+#             */
-/*   Updated: 2026/07/27 03:54:42 by hakalkan         ###   ########.fr       */
+/*   Updated: 2026/07/27 04:34:02 by hakalkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,6 +121,20 @@ typedef struct s_ray
 void parser(int fd, t_scene *s);
 double	ft_atod(char *str);
 void	print_scene(t_scene *scene);
+t_color parse_color(char *s);
+t_vector parse_vector(char *s);
+void parser_cy(char **arg, t_scene *s);
+void parser_ambient(char **split , t_scene *s);
+void parser_camera(char **arg, t_scene *s);
+void parser_light(char **arg,t_scene *s);
+t_vector vector_add(t_vector *x1 ,t_vector *x2);
+t_vector *vector_sub(t_vector *x1 ,t_vector *x2);
+t_vector vector_scale(t_vector *vec ,double fold);
+double vector_lenght(t_vector *x);
+t_vector vector_normalize(t_vector vec);
+double vector_dot(t_vector *v1, t_vector *v2);
+t_vector *vector_cross(t_vector *v1, t_vector *v2);
+
 
 
 #endif
