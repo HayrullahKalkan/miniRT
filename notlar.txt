@@ -11,6 +11,8 @@ TOPLAMA NIN AYNISI
 Işının denklemi 
 
 ` P(t) = O + t⋅D `,
+P(t)=origin + direction*t
+
 burada P(t), belirli bir t parametresi için ışın üzerindeki herhangi bir noktayı temsil eder , 
 O ve D sırasıyla orijin ve yönü temsil eder, t ise ışın boyunca hareket etmemize yardımcı olan skalar bir parametredir.
  Ve orijinde (0, 0, 0) yerleştirilmiş , yarıçapı 1 olan bir kürenin

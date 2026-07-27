@@ -6,7 +6,7 @@
 /*   By: hakalkan <hakalkan@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/16 14:44:21 by hakalkan          #+#    #+#             */
-/*   Updated: 2026/07/21 05:51:25 by hakalkan         ###   ########.fr       */
+/*   Updated: 2026/07/27 03:54:42 by hakalkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,19 @@ typedef struct s_mlx
 }   t_mlx;
 
 
-void parser(int fd);
+// render structs
+
+typedef struct s_ray
+{
+	t_vector origin;
+	t_vector direction;
+	/* data */
+}	t_ray;
+
+
+void parser(int fd, t_scene *s);
+double	ft_atod(char *str);
+void	print_scene(t_scene *scene);
+
 
 #endif

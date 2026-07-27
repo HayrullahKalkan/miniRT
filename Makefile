@@ -1,6 +1,13 @@
 NAME = miniRT
-SRCS = main.c ./parser/parser.c ./getnextline/get_next_line.c ./getnextline/get_next_line_utils.c
+SRCS = \
+	main.c \
+	./parser/parser.c \
+	./parser/atod.c \
+	./getnextline/get_next_line.c \
+	./getnextline/get_next_line_utils.c \
+	print.c
 OBJS = $(SRCS:.c=.o)
+
 
 MLX_PATH = ./minilibx-linux
 MLX = $(MLX_PATH)/libmlx.a
@@ -8,28 +15,34 @@ MLX_FLAGS = -L$(MLX_PATH) -lmlx -lXext -lX11 -lm
 CC	 = cc
 RM	 = rm -f
 CFLAGS = -Wall -Wextra -Werror
+LIBFT_DIR = libft
+LIBFT = $(LIBFT_DIR)/libft.a
 
 
 
 .PHONY: all clean fclean re
 
-all: $(MLX) $(NAME)
+all: $(LIBFT) $(MLX) $(NAME)
 
+$(LIBFT):
+	make bonus -C $(LIBFT_DIR)
 
 $(MLX):
 	make -C $(MLX_PATH)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) $(MLX_FLAGS) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) $(MLX) $(MLX_FLAGS) -o $(NAME)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -I$(MLX_PATH) -c $< -o $@
+	$(CC) $(CFLAGS) -I$(LIBFT_DIR) -I$(MLX_PATH) -c $< -o $@
 
 clean:
 	$(RM) $(OBJS)
+	make -C $(LIBFT_DIR) clean
 	make -C $(MLX_PATH) clean
 
 fclean: clean
 	$(RM) $(NAME)
+	make -C $(LIBFT_DIR) fclean
 
 re: fclean all
