@@ -6,7 +6,7 @@
 /*   By: hakalkan <hakalkan@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 04:31:39 by hakalkan          #+#    #+#             */
-/*   Updated: 2026/07/27 04:39:24 by hakalkan         ###   ########.fr       */
+/*   Updated: 2026/08/01 07:50:16 by hakalkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,17 +53,17 @@ double vector_lenght(t_vector *x)
 	sum = sqrt(sum);
 	return (sum);
 }
-t_vector vector_normalize(t_vector vec)
+t_vector *vector_normalize(t_vector *vec)
 {
 	double len;
 
-	len = vector_lenght(&vec);
+	len = vector_lenght(vec);
 	if (len == 0)
 		return (vec);
 	
-	vec.x = vec.x/len;
-	vec.y = vec.y/len;
-	vec.z = vec.z/len;
+	vec->x = vec->x/len;
+	vec->y = vec->y/len;
+	vec->z = vec->z/len;
 	
 	return (vec);
 }

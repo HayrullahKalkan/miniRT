@@ -6,7 +6,7 @@
 /*   By: hakalkan <hakalkan@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/16 14:44:21 by hakalkan          #+#    #+#             */
-/*   Updated: 2026/07/27 04:34:02 by hakalkan         ###   ########.fr       */
+/*   Updated: 2026/08/01 07:35:41 by hakalkan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,19 @@ typedef struct s_ray
 	/* data */
 }	t_ray;
 
+typedef struct s_hit
+{
+    int hit;
+
+    double t;
+
+    t_vector point;
+
+    t_vector normal;
+
+    t_color color;
+
+} t_hit;
 
 void parser(int fd, t_scene *s);
 double	ft_atod(char *str);
